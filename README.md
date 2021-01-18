@@ -39,16 +39,6 @@
 
 ### 组件使用说明
 
-#### 添加依赖
-
-```
-maven { url 'http://172.16.0.236:8081/repository/maven-public/' }
-```
-
-```
-implementation 'com.che300.car_toast:car_toast:1.0.0-20201023.103123-1'
-```
-
 #### 配置&初始化
 
 ##### 自定义样式
