@@ -8,16 +8,16 @@
 
 | 属性值                | 说明                           |
 | --------------------- | ------------------------------ |
-| CarToast.LENGTH_SHORT | 短时间Toast显示 2s（默认时间） |
-| CarToast.LENGTH_LONG  | 长时间Toast显示 3.5s           |
+| QYFToast.LENGTH_SHORT | 短时间Toast显示 2s（默认时间） |
+| QYFToast.LENGTH_LONG  | 长时间Toast显示 3.5s           |
 
 #### 信息排队显示方式
 
 | 属性值                  | 说明                                 |
 | ----------------------- | ------------------------------------ |
-| CarToast.REPLACE_BEHIND | 排队依次显示（默认方式）             |
-| CarToast.REPLACE_NOW    | 立即显示，丢弃之前未显示的消息       |
-| CarToast.DISCARD        | 如果当前有消息正在显示，则丢弃不显示 |
+| QYFToast.REPLACE_BEHIND | 排队依次显示（默认方式）             |
+| QYFToast.REPLACE_NOW    | 立即显示，丢弃之前未显示的消息       |
+| QYFToast.DISCARD        | 如果当前有消息正在显示，则丢弃不显示 |
 
 #### 默认样式(支持修改的样式)
 
@@ -100,7 +100,7 @@ class ToastContentIntercept : IToastContentIntercept {
 说明：<span style="color:#ff0000">在使用之前，必须进行初始化操作；</span>style、toastContentIntercept 不赋值，使用默认参数
 
 ```
- CarToast.init(
+ QYFToast.init(
                 application = this, // 上下文对象
                 style = StyleA(), // Toast样式，可以为空（使用默认样式）
                 toastContentIntercept = ToastContentIntercept() //Toast 内容拦截器可以为空（使用默认拦截器）
@@ -114,25 +114,25 @@ class ToastContentIntercept : IToastContentIntercept {
 ##### 默认显示方式显示
 
 ```
-CarToast.show("内容")
+QYFToast.show("内容")
 ```
 
 ##### 更改显示时长
 
 ```
-CarToast.show("内容",CarToast.LENGTH_SHORT|CarToast.LENGTH_LONG)
+QYFToast.show("内容",CarToast.LENGTH_SHORT|CarToast.LENGTH_LONG)
 ```
 
 ##### 更改显示时长&排队方式
 
 ```
- CarToast.show("内容", CarToast.LENGTH_SHORT, CarToast.REPLACE_NOW)
+ QYFToast.show("内容", CarToast.LENGTH_SHORT, CarToast.REPLACE_NOW)
 ```
 
 ##### 当前消息使用自定义样式显示
 
 ```
- CarToast.show("内容", CarToast.LENGTH_SHORT, CarToast.REPLACE_BEHIND, StyleB())
+ QYFToast.show("内容", CarToast.LENGTH_SHORT, CarToast.REPLACE_BEHIND, StyleB())
 ```
 
 ##### 显示自定义View
@@ -141,7 +141,7 @@ CarToast.show("内容",CarToast.LENGTH_SHORT|CarToast.LENGTH_LONG)
 
 ```
 val toastView = LayoutInflater.from(this).inflate(R.layout.toast_view, null)
-CarToast.show("你好世界", SelfToastStyle(), toastView, CarToast.LENGTH_SHORT,   	CarToast.REPLACE_NOW)
+QYFToast.show("你好世界", SelfToastStyle(), toastView, CarToast.LENGTH_SHORT,   	CarToast.REPLACE_NOW)
 ```
 
 ### FAQ
